@@ -1,0 +1,1094 @@
+html {
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+figcaption,
+figure,
+main {
+	display: block;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+b,
+strong {
+	font-weight: inherit;
+	font-weight: bolder;
+}
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+dfn {
+	font-style: italic;
+}
+mark {
+	background-color: #ff0;
+	color: #000;
+}
+small {
+	font-size: 80%;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+audio,
+video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+img {
+	border-style: none;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+button,
+input {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+	-webkit-appearance: button;
+}
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+progress {
+	display: inline-block;
+	vertical-align: baseline;
+}
+textarea {
+	overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+details,
+menu {
+	display: block;
+}
+summary {
+	display: list-item;
+}
+canvas {
+	display: inline-block;
+}
+[hidden],
+template {
+	display: none;
+}
+@keyframes _1j7wS {
+	0% {
+		width: 0;
+	}
+	to {
+		width: 90%;
+	}
+}
+.overlay-enabled {
+	position: relative;
+	overflow: hidden;
+}
+.overlay-enabled,
+.overlay-enabled .fixed-nav,
+.overlay-enabled .global-nav {
+	margin-right: 15px;
+}
+.overlay-no-margin,
+.overlay-no-margin .fixed-nav,
+.overlay-no-margin .global-nav {
+	margin-right: 0 !important;
+}
+.overlay {
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #282c3f;
+	opacity: 0.7;
+	overflow: hidden;
+}
+.rupee:before {
+	content: "\20B9";
+	margin-right: 0.1rem;
+}
+html {
+	box-sizing: border-box;
+	font-family: arial, Helvetica Neue, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	letter-spacing: -0.5px;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-weight: 300;
+	color: #282c3f;
+}
+@font-face {
+	font-family: ProximaNova;
+	font-weight: 700;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.ttf")
+			format("truetype");
+}
+@font-face {
+	font-family: ProximaNova;
+	font-weight: 600;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.ttf")
+			format("truetype");
+}
+@font-face {
+	font-family: ProximaNova;
+	font-weight: 500;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.ttf")
+			format("truetype");
+}
+@font-face {
+	font-family: ProximaNova;
+	font-weight: 400;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.ttf")
+			format("truetype");
+}
+@font-face {
+	font-family: ProximaNova;
+	font-weight: 300;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.ttf")
+			format("truetype");
+}
+@font-face {
+	font-family: ProximaNovaBold;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.eot");
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.eot?#iefix")
+			format("embedded-opentype"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.ttf")
+			format("truetype");
+}
+@font-face {
+	font-family: AsapCondensedSemiBold;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.eot");
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.eot?#iefix")
+			format("embedded-opentype"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.ttf")
+			format("truetype"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.svg#AsapCondensedSemiBold")
+			format("svg");
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: ProximaNovaCondensedBold;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.eot");
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.eot?#iefix")
+			format("embedded-opentype"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.ttf")
+			format("truetype");
+	font-style: normal;
+}
+@font-face {
+	font-family: ProximaNovaBlack;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.ttf")
+			format("truetype");
+	font-style: normal;
+}
+@font-face {
+	font-family: ProximaNovaCondensedBlack;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.ttf")
+			format("truetype");
+	font-style: normal;
+}
+@font-face {
+	font-family: ProximaNovaCondensedRegular;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.ttf")
+			format("truetype");
+	font-style: normal;
+}
+@font-face {
+	font-family: ProximaNovaExtraBold;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaExtraBold.ttf")
+			format("truetype");
+	font-style: normal;
+}
+@font-face {
+	font-family: ProximaNovaLight;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.ttf")
+			format("truetype");
+	font-style: normal;
+}
+@font-face {
+	font-family: ProximaNovaSemiBold;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.ttf")
+			format("truetype");
+	font-style: normal;
+}
+@font-face {
+	font-family: ProximaNovaCondensedExtraBold;
+	src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.woff2")
+			format("woff2"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.woff")
+			format("woff"),
+		url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.ttf")
+			format("truetype");
+	font-style: normal;
+}
+.fonts-loaded {
+	font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+	letter-spacing: 0;
+}
+*,
+:after,
+:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: transparent;
+	-ms-text-size-adjust: none;
+	outline: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+input {
+	line-height: normal;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+	text-decoration: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+button {
+	padding: 0;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	text-align: left;
+}
+::-moz-focus-inner {
+	border: none;
+	outline: none;
+}
+input::-ms-clear {
+	display: none;
+}
+@font-face {
+	font-family: icomoon;
+	src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.c06052.eot);
+	src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.c06052.eot#iefix)
+			format("embedded-opentype"),
+		url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.133be6.ttf)
+			format("truetype"),
+		url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.7a1462.woff)
+			format("woff"),
+		url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.8554c7.svg#icomoon)
+			format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+[class*=" icon-"],
+[class^="icon-"] {
+	font-family: icomoon;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-meat:before {
+	content: "\E91F";
+}
+.icon-leaf:before {
+	content: "\E920";
+}
+.icon-downArrow:before {
+	content: "\E923";
+}
+.icon-back:before {
+	content: "\E924";
+}
+.icon-cartInverse:before {
+	content: "\E925";
+}
+.icon-close:before {
+	content: "\E927";
+}
+.icon-downArrow2:before {
+	content: "\E928";
+}
+.icon-downArrowSmall:before {
+	content: "\E929";
+}
+.icon-explore:before {
+	content: "\E910";
+}
+.icon-heart:before {
+	content: "\E92A";
+}
+.icon-heartInverse:before {
+	content: "\E92B";
+}
+.icon-filter:before {
+	content: "\E92C";
+}
+.icon-home:before {
+	content: "\E92D";
+}
+.icon-info:before {
+	content: "\E92E";
+}
+.icon-menu:before {
+	content: "\E931";
+}
+.icon-rightArrow:before {
+	content: "\E932";
+}
+.icon-orderConfirmed:before {
+	content: "\E915";
+}
+.icon-orderReceived:before {
+	content: "\E917";
+}
+.icon-order-confirmed-inverse:before {
+	content: "\E934";
+}
+.icon-order-received-inverse:before {
+	content: "\E92F";
+}
+.icon-orderPickedup:before {
+	content: "\E918";
+}
+.icon-star:before {
+	content: "\E938";
+}
+.icon-recent:before {
+	content: "\E939";
+}
+.icon-magnifier:before {
+	content: "\E910";
+}
+.icon-starInverse:before {
+	content: "\E93C";
+}
+.icon-swgy:before {
+	content: "\E93F";
+}
+.icon-swgyInverse:before {
+	content: "\E940";
+}
+.icon-tickSharp:before {
+	content: "\E941";
+}
+.icon-tickRound:before {
+	content: "\E942";
+}
+.icon-foodSymbol:before {
+	content: "\E944";
+}
+.icon-Veg:before {
+	content: "\E997";
+}
+.icon-NonVeg:before {
+	content: "\E998";
+}
+.icon-verified:before {
+	content: "\E945";
+}
+.icon-work:before {
+	content: "\E946";
+}
+.icon-offer-filled:before,
+.icon-offer:before {
+	content: "\E921";
+}
+.icon-orderCancel:before {
+	content: "\E947";
+}
+.icon-orderDelivered:before {
+	content: "\E916";
+}
+.icon-delete:before {
+	content: "\E949";
+}
+.icon-homeDark:before {
+	content: "\E94A";
+}
+.icon-markerDark:before {
+	content: "\E94B";
+}
+.icon-workDark:before {
+	content: "\E94C";
+}
+.icon-close-thin:before {
+	content: "\E913";
+}
+.icon-location:before {
+	content: "\E911";
+}
+.icon-location-crosshair:before {
+	content: "\E914";
+}
+.icon-alert:before {
+	content: "\E956";
+}
+.icon-netbanking:before {
+	content: "\E907";
+}
+.icon-paybycash:before {
+	content: "\E908";
+}
+.icon-preferred:before {
+	content: "\E909";
+}
+.icon-saved-card:before {
+	content: "\E90A";
+}
+.icon-wallet-filled:before {
+	content: "\E90B";
+}
+.icon-wallet-checkout:before {
+	content: "\E90C";
+}
+.icon-marker-checkout:before {
+	content: "\E90D";
+}
+.icon-user-checkout:before {
+	content: "\E90E";
+}
+.icon-payments:before {
+	content: "\E912";
+}
+.icon-orders:before {
+	content: "\E919";
+}
+.icon-manage-addresses:before {
+	content: "\E91D";
+}
+.icon-favourites:before {
+	content: "\E91E";
+}
+.icon-overdue:before {
+	content: "\E906";
+}
+.icon-add-new-card:before {
+	content: "\E905";
+}
+.icon-offers-coupon:before {
+	content: "\E948";
+}
+.icon-paylater:before {
+	content: "\E950";
+}
+.icon-super-outline:before {
+	content: "\E951";
+}
+.icon-super-filled:before {
+	content: "\E952";
+}
+.icon-super-account:before {
+	content: "\E953";
+}
+.icon-multi-offer:before {
+	content: "\E904";
+}
+.icon-chat:before {
+	content: "\E954";
+}
+.icon-upi:before {
+	content: "\E902";
+}
+.icon-check-round:before {
+	content: "\E903";
+}
+.icon-feedback:before {
+	content: "\E901";
+}
+.icon-quotes-rounded:before {
+	content: "\E900";
+}
+.icon-down-bold:before {
+	content: "\E957";
+}
+.icon-swiggy-payment:before {
+	content: "\E958";
+}
+.icon-spice-icon:before {
+	content: "\E959";
+}
+.icon-settings:before {
+	content: "\E95A";
+}
+.icon-Veg-4:before {
+	content: "\E973";
+}
+.icon-Non-Veg-4:before {
+	content: "\E972";
+}
+.icon-Search_close:before {
+	content: "\E95B";
+}
+@keyframes _1gYtM {
+	0% {
+		width: 0;
+	}
+	to {
+		width: 90%;
+	}
+}
+
+/* CSS CUSTOM */
+
+.container {
+	position: relative;
+	padding-top: 80px;
+	min-height: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 1240px;
+}
+
+.header-nav {
+	box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	background: #fff;
+	z-index: 1000;
+	will-change: transform;
+	transform: translateZ(0);
+	transition: transform 0.3s ease;
+	contain: size layout style;
+	padding: 0 20px;
+}
+
+.inner-header-nav {
+	max-width: 1200px;
+	min-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	height: 80px;
+	background: #fff;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.logo {
+	display: block;
+	height: 49px;
+	transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+	margin-right: 16px;
+}
+
+.locate-me {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-left: 30px;
+	max-width: 300px;
+	height: 30px;
+	cursor: pointer;
+	margin-bottom: -1px;
+	padding-right: 10px;
+	position: relative;
+}
+
+/* .locate-me ._34oCb {
+	text-transform: uppercase;
+} */
+
+.locate-me ._1tcx6 {
+	font-weight: 700;
+	color: #3d4152;
+	float: left;
+}
+.locate-me ._1tcx6,
+._2z2N5 {
+	position: relative;
+}
+
+.locate-me ._3HusE {
+	display: block;
+	padding-left: 5px;
+	margin-left: 5px;
+	color: #686b78;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.locate-me .kVKTT {
+	position: absolute;
+	right: -12px;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 0.9rem;
+	color: #fc8019;
+	font-weight: 700;
+}
+
+.right-nav {
+	-ms-flex: 1;
+	flex: 1;
+	min-width: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+	height: 100%;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.right-nav .nav-item:first-child {
+	margin-right: 0;
+}
+
+.right-nav .nav-item {
+	margin-right: 60px;
+	color: #3d4152 !important;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.right-nav .nav-item > .nav-item-wrapper {
+	position: relative;
+	height: 80px;
+	cursor: pointer;
+}
+
+.nav-link,
+.nav-item-wrapper {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 28px;
+}
+.nav-link {
+	height: 100%;
+	margin-left: -28px;
+	color: inherit;
+}
+.nav-icon {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	line-height: 0;
+}
+.nav-icon .svg-cart {
+	fill: #fff;
+	stroke-width: 2px;
+	stroke: #282c3f;
+}
+.nav-icon .svg-help {
+	position: relative;
+	stroke: currentColor;
+	fill: #3d4152;
+	stroke-width: 0;
+}
+.cart {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	font-weight: 600;
+}
+.nav-item:hover {
+	color: #fc8019 !important;
+}
+
+.body-content {
+	background: #ffffff;
+	min-height: calc(100vh - 368px);
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	z-index: 2;
+}
+.inner-body-content {
+	width: 1300px;
+	margin: 0 auto;
+	max-width: 100%;
+	position: relative;
+}
+.all-resturant {
+	max-width: 1200px;
+	min-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 0;
+	background: #fff;
+}
+
+.resturants-margin {
+	padding-top: 39px;
+	margin-top: -10px;
+	border-top: 1px solid #e9e9eb;
+}
+
+.card-row {
+	display: -ms-flexbox;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-bottom: 85px;
+	display: flex;
+	margin: 0px -24px;
+}
+.card-position,
+.search-container .inner-card,
+.card-item {
+	position: relative;
+}
+.card-item {
+	color: inherit;
+	background: #fff;
+	margin: 0px 2px;
+	text-decoration: none;
+	display: block;
+}
+.inner-card {
+	padding: 20px 20px;
+	border: 1px solid #fff;
+	contain: content;
+	margin: 0px 5px;
+}
+.card-width {
+	width: 254px;
+}
+
+.card-width .resturant-img {
+	background: #eef0f5;
+	width: 254px;
+	height: 160px;
+	position: relative;
+}
+
+.card-width .resturant-img > img {
+	transition: opacity 0.3s ease-out;
+	opacity: 1 !important;
+	border-style: none;
+	width: 254px;
+	aspect-ratio: auto 254 / 160;
+	height: 160px;
+}
+
+.res-detail {
+	margin-top: 14px;
+}
+.res-name {
+	font-size: 17px;
+	font-weight: 500;
+	word-break: break-word;
+}
+.res-cusines {
+	color: #686b78;
+	font-size: 13px;
+	margin-top: 4px;
+}
+.res-others {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 18px;
+	font-size: 12px;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	color: #535665;
+}
+.rating {
+	height: 20px;
+	width: 43px;
+	padding: 0 5px;
+	font-weight: 400;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.rating .icon-star {
+	font-size: 10px;
+	margin-right: 4px;
+	position: relative;
+	top: -1px;
+}
+.average-rate {
+	background-color: #db7c38;
+	color: #fff;
+}
+.good-rate {
+	background-color: #2bba3e;
+	color: #fff;
+}
+.for-ppl {
+	color: #535665;
+}
+.inner-card:hover {
+	border-color: #d3d5df;
+	box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+}
+.search-container {
+	height: 72px;
+	position: relative;
+}
+.search-container .inner-wrap {
+	height: 72px;
+	transform: translateZ(0);
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.search-container .inner-wrap > .box {
+	height: 100%;
+}
+.search-container .inner-wrap > .box > .coloumn {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+}
+.total-res {
+	font-weight: 600;
+	font-size: 28px;
+	-ms-flex: 1;
+	flex: 1;
+}
+.search-box {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 9px;
+}
+.search-box-input {
+	height: 48px;
+	width: 500px;
+	background: #fff;
+	border: 1px solid #282c3f33;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	display: flex;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.search-box-input input[type="text"] {
+	font-size: 1.15rem;
+	line-height: 24px;
+	width: 100%;
+	height: 42px;
+	outline: 0;
+	border: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-family: inherit;
+	color: inherit;
+	background: inherit;
+	vertical-align: middle;
+	font-weight: 500;
+}
+.btn-close {
+	position: relative;
+	top: 2px;
+	margin-left: 15px;
+}

@@ -1,0 +1,1101 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  margin: .67em 0;
+  font-size: 2em;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+a {
+  -webkit-text-decoration-skip: objects;
+  background-color: #0000;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  color: #000;
+  background-color: #ff0;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  height: 0;
+  display: none;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+[type="reset"], [type="submit"], button, html [type="button"] {
+  -webkit-appearance: button;
+}
+
+[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner, button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring, button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  max-width: 100%;
+  white-space: normal;
+  padding: 0;
+  display: table;
+}
+
+progress {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+[hidden], template {
+  display: none;
+}
+
+@keyframes _1j7wS {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 90%;
+  }
+}
+
+.overlay-enabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-enabled, .overlay-enabled .fixed-nav, .overlay-enabled .global-nav {
+  margin-right: 15px;
+}
+
+.overlay-no-margin, .overlay-no-margin .fixed-nav, .overlay-no-margin .global-nav {
+  margin-right: 0 !important;
+}
+
+.overlay {
+  z-index: 10000;
+  opacity: .7;
+  background: #282c3f;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.rupee:before {
+  content: "₹";
+  margin-right: .1rem;
+}
+
+html {
+  box-sizing: border-box;
+  letter-spacing: -.5px;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-family: arial, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+body, html {
+  height: 100%;
+  color: #282c3f;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 700;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 600;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 500;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 400;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 300;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ProximaNovaBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.eot");
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.eot?#iefix") format("embedded-opentype"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: AsapCondensedSemiBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.eot");
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.eot?#iefix") format("embedded-opentype"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.ttf") format("truetype"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.svg#AsapCondensedSemiBold") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.eot");
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.eot?#iefix") format("embedded-opentype"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNovaBlack;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedBlack;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedRegular;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNovaExtraBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaExtraBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNovaSemiBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedExtraBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.woff2") format("woff2"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.ttf") format("truetype");
+  font-style: normal;
+}
+
+.fonts-loaded {
+  letter-spacing: 0;
+  font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -ms-text-size-adjust: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input {
+  line-height: normal;
+}
+
+a, a:focus, a:hover, a:visited {
+  text-decoration: none;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  appearance: none;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+@font-face {
+  font-family: icomoon;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.c06052.eot");
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.c06052.eot#iefix") format("embedded-opentype"), url("https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.133be6.ttf") format("truetype"), url("https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.7a1462.woff") format("woff"), url("https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.8554c7.svg#icomoon") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class*=" icon-"], [class^="icon-"] {
+  speak: none;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: icomoon;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.icon-meat:before {
+  content: "";
+}
+
+.icon-leaf:before {
+  content: "";
+}
+
+.icon-downArrow:before {
+  content: "";
+}
+
+.icon-back:before {
+  content: "";
+}
+
+.icon-cartInverse:before {
+  content: "";
+}
+
+.icon-close:before {
+  content: "";
+}
+
+.icon-downArrow2:before {
+  content: "";
+}
+
+.icon-downArrowSmall:before {
+  content: "";
+}
+
+.icon-explore:before {
+  content: "";
+}
+
+.icon-heart:before {
+  content: "";
+}
+
+.icon-heartInverse:before {
+  content: "";
+}
+
+.icon-filter:before {
+  content: "";
+}
+
+.icon-home:before {
+  content: "";
+}
+
+.icon-info:before {
+  content: "";
+}
+
+.icon-menu:before {
+  content: "";
+}
+
+.icon-rightArrow:before {
+  content: "";
+}
+
+.icon-orderConfirmed:before {
+  content: "";
+}
+
+.icon-orderReceived:before {
+  content: "";
+}
+
+.icon-order-confirmed-inverse:before {
+  content: "";
+}
+
+.icon-order-received-inverse:before {
+  content: "";
+}
+
+.icon-orderPickedup:before {
+  content: "";
+}
+
+.icon-star:before {
+  content: "";
+}
+
+.icon-recent:before {
+  content: "";
+}
+
+.icon-magnifier:before {
+  content: "";
+}
+
+.icon-starInverse:before {
+  content: "";
+}
+
+.icon-swgy:before {
+  content: "";
+}
+
+.icon-swgyInverse:before {
+  content: "";
+}
+
+.icon-tickSharp:before {
+  content: "";
+}
+
+.icon-tickRound:before {
+  content: "";
+}
+
+.icon-foodSymbol:before {
+  content: "";
+}
+
+.icon-Veg:before {
+  content: "";
+}
+
+.icon-NonVeg:before {
+  content: "";
+}
+
+.icon-verified:before {
+  content: "";
+}
+
+.icon-work:before {
+  content: "";
+}
+
+.icon-offer-filled:before, .icon-offer:before {
+  content: "";
+}
+
+.icon-orderCancel:before {
+  content: "";
+}
+
+.icon-orderDelivered:before {
+  content: "";
+}
+
+.icon-delete:before {
+  content: "";
+}
+
+.icon-homeDark:before {
+  content: "";
+}
+
+.icon-markerDark:before {
+  content: "";
+}
+
+.icon-workDark:before {
+  content: "";
+}
+
+.icon-close-thin:before {
+  content: "";
+}
+
+.icon-location:before {
+  content: "";
+}
+
+.icon-location-crosshair:before {
+  content: "";
+}
+
+.icon-alert:before {
+  content: "";
+}
+
+.icon-netbanking:before {
+  content: "";
+}
+
+.icon-paybycash:before {
+  content: "";
+}
+
+.icon-preferred:before {
+  content: "";
+}
+
+.icon-saved-card:before {
+  content: "";
+}
+
+.icon-wallet-filled:before {
+  content: "";
+}
+
+.icon-wallet-checkout:before {
+  content: "";
+}
+
+.icon-marker-checkout:before {
+  content: "";
+}
+
+.icon-user-checkout:before {
+  content: "";
+}
+
+.icon-payments:before {
+  content: "";
+}
+
+.icon-orders:before {
+  content: "";
+}
+
+.icon-manage-addresses:before {
+  content: "";
+}
+
+.icon-favourites:before {
+  content: "";
+}
+
+.icon-overdue:before {
+  content: "";
+}
+
+.icon-add-new-card:before {
+  content: "";
+}
+
+.icon-offers-coupon:before {
+  content: "";
+}
+
+.icon-paylater:before {
+  content: "";
+}
+
+.icon-super-outline:before {
+  content: "";
+}
+
+.icon-super-filled:before {
+  content: "";
+}
+
+.icon-super-account:before {
+  content: "";
+}
+
+.icon-multi-offer:before {
+  content: "";
+}
+
+.icon-chat:before {
+  content: "";
+}
+
+.icon-upi:before {
+  content: "";
+}
+
+.icon-check-round:before {
+  content: "";
+}
+
+.icon-feedback:before {
+  content: "";
+}
+
+.icon-quotes-rounded:before {
+  content: "";
+}
+
+.icon-down-bold:before {
+  content: "";
+}
+
+.icon-swiggy-payment:before {
+  content: "";
+}
+
+.icon-spice-icon:before {
+  content: "";
+}
+
+.icon-settings:before {
+  content: "";
+}
+
+.icon-Veg-4:before {
+  content: "";
+}
+
+.icon-Non-Veg-4:before {
+  content: "";
+}
+
+.icon-Search_close:before {
+  content: "";
+}
+
+@keyframes _1gYtM {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 90%;
+  }
+}
+
+.container {
+  min-height: 100%;
+  min-width: 1240px;
+  flex-direction: column;
+  padding-top: 80px;
+  display: flex;
+  position: relative;
+}
+
+.header-nav {
+  height: 80px;
+  z-index: 1000;
+  will-change: transform;
+  contain: size layout style;
+  background: #fff;
+  padding: 0 20px;
+  transition: transform .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateZ(0);
+  box-shadow: 0 15px 40px -20px #282c3f26;
+}
+
+.inner-header-nav {
+  max-width: 1200px;
+  min-width: 1200px;
+  height: 80px;
+  background: #fff;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.logo {
+  height: 49px;
+  margin-right: 16px;
+  transition: transform .3s cubic-bezier(.215, .61, .355, 1);
+  display: block;
+}
+
+.locate-me {
+  max-width: 300px;
+  height: 30px;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: -1px;
+  margin-left: 30px;
+  padding-right: 10px;
+  display: flex;
+  position: relative;
+}
+
+.locate-me ._1tcx6 {
+  color: #3d4152;
+  float: left;
+  font-weight: 700;
+}
+
+.locate-me ._1tcx6, ._2z2N5 {
+  position: relative;
+}
+
+.locate-me ._3HusE {
+  color: #686b78;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 5px;
+  padding-left: 5px;
+  display: block;
+  overflow: hidden;
+}
+
+.locate-me .kVKTT {
+  color: #fc8019;
+  font-size: .9rem;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+}
+
+.right-nav {
+  min-width: 0;
+  height: 100%;
+  flex-direction: row-reverse;
+  flex: 1;
+  align-items: center;
+  display: flex;
+}
+
+.right-nav .nav-item:first-child {
+  margin-right: 0;
+}
+
+.right-nav .nav-item {
+  margin-right: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3d4152 !important;
+}
+
+.right-nav .nav-item > .nav-item-wrapper {
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-link, .nav-item-wrapper {
+  align-items: center;
+  padding-left: 28px;
+  display: flex;
+}
+
+.nav-link {
+  height: 100%;
+  color: inherit;
+  margin-left: -28px;
+}
+
+.nav-icon {
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.nav-icon .svg-cart {
+  fill: #fff;
+  stroke-width: 2px;
+  stroke: #282c3f;
+}
+
+.nav-icon .svg-help {
+  stroke: currentColor;
+  fill: #3d4152;
+  stroke-width: 0;
+  position: relative;
+}
+
+.cart {
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-item:hover {
+  color: #fc8019 !important;
+}
+
+.body-content {
+  min-height: calc(100vh - 368px);
+  z-index: 2;
+  background: #fff;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.inner-body-content {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.all-resturant {
+  max-width: 1200px;
+  min-width: 1200px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+}
+
+.resturants-margin {
+  border-top: 1px solid #e9e9eb;
+  margin-top: -10px;
+  padding-top: 39px;
+}
+
+.card-row {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -24px;
+  display: flex;
+}
+
+.card-position, .search-container .inner-card, .card-item {
+  position: relative;
+}
+
+.card-item {
+  color: inherit;
+  background: #fff;
+  margin: 0 2px;
+  text-decoration: none;
+  display: block;
+}
+
+.inner-card {
+  contain: content;
+  border: 1px solid #fff;
+  margin: 0 5px;
+  padding: 20px;
+}
+
+.card-width {
+  width: 254px;
+}
+
+.card-width .resturant-img {
+  width: 254px;
+  height: 160px;
+  background: #eef0f5;
+  position: relative;
+}
+
+.card-width .resturant-img > img {
+  width: 254px;
+  aspect-ratio: auto 254 / 160;
+  height: 160px;
+  border-style: none;
+  transition: opacity .3s ease-out;
+  opacity: 1 !important;
+}
+
+.res-detail {
+  margin-top: 14px;
+}
+
+.res-name {
+  word-break: break-word;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.res-cusines {
+  color: #686b78;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.res-others {
+  color: #535665;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 12px;
+  display: flex;
+}
+
+.rating {
+  height: 20px;
+  width: 43px;
+  align-items: center;
+  padding: 0 5px;
+  font-weight: 400;
+  display: flex;
+}
+
+.rating .icon-star {
+  margin-right: 4px;
+  font-size: 10px;
+  position: relative;
+  top: -1px;
+}
+
+.average-rate {
+  color: #fff;
+  background-color: #db7c38;
+}
+
+.good-rate {
+  color: #fff;
+  background-color: #2bba3e;
+}
+
+.for-ppl {
+  color: #535665;
+}
+
+.inner-card:hover {
+  border-color: #d3d5df;
+  box-shadow: 0 4px 7px #dadce699;
+}
+
+.search-container {
+  height: 72px;
+  position: relative;
+}
+
+.search-container .inner-wrap {
+  height: 72px;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateZ(0);
+}
+
+.search-container .inner-wrap > .box {
+  height: 100%;
+}
+
+.search-container .inner-wrap > .box > .coloumn {
+  max-width: 1200px;
+  height: 100%;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+.total-res {
+  flex: 1;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.search-box {
+  align-items: center;
+  margin-top: 9px;
+  display: flex;
+}
+
+.search-box-input {
+  height: 48px;
+  width: 500px;
+  background: #fff;
+  border: 1px solid #282c3f33;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  overflow: hidden;
+}
+
+.search-box-input input[type="text"] {
+  width: 100%;
+  height: 42px;
+  text-overflow: ellipsis;
+  color: inherit;
+  background: inherit;
+  vertical-align: middle;
+  border: none;
+  outline: 0;
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 24px;
+  overflow: hidden;
+}
+
+.btn-close {
+  margin-left: 15px;
+  position: relative;
+  top: 2px;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
