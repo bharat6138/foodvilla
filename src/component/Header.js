@@ -4,7 +4,7 @@ export const Title = () => {
 	return (
 		<>
 			<div className="logo">
-				<img src="https://img.icons8.com/fluency/48/null/kawaii-french-fries.png" />
+				<img src="https://img.icons8.com/color-glass/46/null/bagel.png" />
 			</div>
 		</>
 	);

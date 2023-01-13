@@ -1,5 +1,7 @@
 import React from "react";
 import { IMG_CDN_URL } from "./config";
+import { Restaurant_Data } from "./config";
+
 const Resturant = ({
 	name,
 	cloudinaryImageId,
@@ -8,7 +10,10 @@ const Resturant = ({
 	avgRating,
 	slaString,
 	costForTwoString,
+	ribbon,
+	aggregatedDiscountInfo,
 }) => {
+	// const { header } = aggregatedDiscountInfo;
 	return (
 		<div className="card-position">
 			<a
@@ -20,6 +25,21 @@ const Resturant = ({
 						<div className="resturant-img">
 							<img alt="Aggarwal Sweets India" src={IMG_CDN_URL + cloudinaryImageId} />
 						</div>
+						{ribbon ? (
+							<div
+								className="promote"
+								style={{
+									background: "rgb(58, 60, 65)",
+									color: "rgb(255, 255, 255)",
+									borderColor: "rgb(30, 32, 35) transparent",
+								}}
+							>
+								<div className="text">{ribbon[0].type}</div>
+							</div>
+						) : (
+							""
+						)}
+
 						<div className="res-detail">
 							<div className="res-name">{name}</div>
 							<div className="res-cusines">{cuisines.join(", ")}</div>
@@ -27,7 +47,9 @@ const Resturant = ({
 						<div className="res-others">
 							<div
 								className={
-									avgRating <= 3.9 ? "rating average-rate" : "rating good-rate "
+									avgRating <= 3.9 && !isNaN(avgRating)
+										? "rating average-rate"
+										: "rating good-rate "
 								}
 							>
 								<span className="icon-star" />
@@ -37,6 +59,12 @@ const Resturant = ({
 							<div>{slaString}</div>
 							<div>•</div>
 							<div className="for-ppl">{costForTwoString}</div>
+							{/* <p>{aggregatedDiscountInfo?.shortDescriptionList[0].meta}</p>
+							{console.log(aggregatedDiscountInfo?.shortDescriptionList[0].meta)} */}
+						</div>
+						<div class="offers">
+							<span class="icon-offer-filled icon"></span>
+							<span class="text">20% off | Use SWIGGYIT</span>
 						</div>
 					</div>
 				</div>

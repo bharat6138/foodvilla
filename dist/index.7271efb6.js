@@ -2903,11 +2903,12 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactDom = require("react-dom");
-var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _client = require("react-dom/client");
+var _clientDefault = parcelHelpers.interopDefault(_client);
 var _indexCss = require("../index.css");
 var _body = require("./component/Body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
+var _carousel = require("./component/Carousel");
 var _header = require("./component/Header");
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2915,27 +2916,32 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _header.Header), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 10,
+                lineNumber: 11,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carousel.Carousel), {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 12,
                 columnNumber: 4
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 4
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 3
     }, undefined);
 };
 _c = AppLayout;
-const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
+const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 // root.render(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 18,
+    lineNumber: 20,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -2946,7 +2952,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../index.css":"giGSC","./component/Header":"knXDc","./component/Body":"iizf5"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","../index.css":"giGSC","./component/Body":"iizf5","./component/Header":"knXDc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./component/Carousel":"4a0Hw"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("47093f621c1a30a9");
 
@@ -5651,7 +5657,28 @@ module.exports = require("cbf170240e7b6d0d");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"j6uA9":[function(require,module,exports) {
+},{}],"lOjBx":[function(require,module,exports) {
+"use strict";
+var m = require("3dbeb017563f501b");
+var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.createRoot(c, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.hydrateRoot(c, h, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+
+},{"3dbeb017563f501b":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -27110,434 +27137,7 @@ module.exports = require("7bd2cbebe8060a70");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("aeda6dce8f2598a1");
-function debounce(func, delay) {
-    var args;
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + " %exports% " + key);
-    }
-}
-
-},{"aeda6dce8f2598a1":"786KC"}],"giGSC":[function() {},{}],"knXDc":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$3d92 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3d92.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Title", ()=>Title);
-parcelHelpers.export(exports, "LocateMe", ()=>LocateMe);
-parcelHelpers.export(exports, "RightMenu", ()=>RightMenu);
-parcelHelpers.export(exports, "Header", ()=>Header);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const Title = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "logo",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://img.icons8.com/fluency/48/null/kawaii-french-fries.png"
-            }, void 0, false, {
-                fileName: "src/component/Header.js",
-                lineNumber: 7,
-                columnNumber: 5
-            }, undefined)
-        }, void 0, false, {
-            fileName: "src/component/Header.js",
-            lineNumber: 6,
-            columnNumber: 4
-        }, undefined)
-    }, void 0, false);
-};
-_c = Title;
-const LocateMe = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "locate-me",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "_1tcx6 _34oCb",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                    className: "_3odgy",
-                    children: "Shalimar Bagh"
-                }, void 0, false, {
-                    fileName: "src/component/Header.js",
-                    lineNumber: 16,
-                    columnNumber: 5
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/component/Header.js",
-                lineNumber: 15,
-                columnNumber: 4
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "_3HusE",
-                children: "Mukherjee Nagar, Delhi, India"
-            }, void 0, false, {
-                fileName: "src/component/Header.js",
-                lineNumber: 18,
-                columnNumber: 4
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "icon-downArrow kVKTT"
-            }, void 0, false, {
-                fileName: "src/component/Header.js",
-                lineNumber: 19,
-                columnNumber: 4
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "_21VC0 sPr5A"
-            }, void 0, false, {
-                fileName: "src/component/Header.js",
-                lineNumber: 20,
-                columnNumber: 4
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/component/Header.js",
-        lineNumber: 14,
-        columnNumber: 3
-    }, undefined);
-};
-_c1 = LocateMe;
-const RightMenu = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-        className: "right-nav",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                className: "nav-item",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "nav-item-wrapper ",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        className: "nav-link",
-                        href: "/checkout",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "nav-icon",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        className: "svg-cart",
-                                        viewBox: "-1 0 37 32",
-                                        height: 20,
-                                        width: 20,
-                                        fill: "#686b78",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            d: "M4.438 0l-2.598 5.11-1.84 26.124h34.909l-1.906-26.124-2.597-5.11z"
-                                        }, void 0, false, {
-                                            fileName: "src/component/Header.js",
-                                            lineNumber: 39,
-                                            columnNumber: 9
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/component/Header.js",
-                                        lineNumber: 32,
-                                        columnNumber: 8
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "cart",
-                                        children: "0"
-                                    }, void 0, false, {
-                                        fileName: "src/component/Header.js",
-                                        lineNumber: 41,
-                                        columnNumber: 8
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/component/Header.js",
-                                lineNumber: 31,
-                                columnNumber: 7
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Cart"
-                            }, void 0, false, {
-                                fileName: "src/component/Header.js",
-                                lineNumber: 43,
-                                columnNumber: 7
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/component/Header.js",
-                        lineNumber: 30,
-                        columnNumber: 6
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/component/Header.js",
-                    lineNumber: 29,
-                    columnNumber: 5
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/component/Header.js",
-                lineNumber: 28,
-                columnNumber: 4
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                className: "nav-item",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "nav-item-wrapper ",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        className: "nav-link",
-                        href: "/checkout",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "nav-icon",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    className: "svg-help",
-                                    viewBox: "6 -1 12 25",
-                                    height: 19,
-                                    width: 19,
-                                    fill: "#686b78",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M21.966903,13.2244898 C22.0156989,12.8231523 22.0408163,12.4145094 22.0408163,12 C22.0408163,11.8357822 22.036874,11.6724851 22.029079,11.5101984 L17.8574333,11.5102041 C17.8707569,11.6717062 17.877551,11.8350597 17.877551,12 C17.877551,12.4199029 17.8335181,12.8295214 17.749818,13.2244898 L21.966903,13.2244898 Z M21.5255943,15.1836735 L16.9414724,15.1836735 C15.8950289,16.8045422 14.0728218,17.877551 12,17.877551 C9.92717823,17.877551 8.1049711,16.8045422 7.05852762,15.1836735 L2.47440565,15.1836735 C3.80564362,19.168549 7.56739481,22.0408163 12,22.0408163 C16.4326052,22.0408163 20.1943564,19.168549 21.5255943,15.1836735 Z M21.7400381,9.55102041 C20.6468384,5.18931674 16.7006382,1.95918367 12,1.95918367 C7.2993618,1.95918367 3.3531616,5.18931674 2.25996187,9.55102041 L6.6553883,9.55102041 C7.58404845,7.5276442 9.62792376,6.12244898 12,6.12244898 C14.3720762,6.12244898 16.4159515,7.5276442 17.3446117,9.55102041 L21.7400381,9.55102041 Z M2.03309705,13.2244898 L6.25018203,13.2244898 C6.16648186,12.8295214 6.12244898,12.4199029 6.12244898,12 C6.12244898,11.8350597 6.1292431,11.6717062 6.14256675,11.5102041 L1.97092075,11.5102041 C1.96312595,11.6724851 1.95918367,11.8357822 1.95918367,12 C1.95918367,12.4145094 1.98430112,12.8231523 2.03309705,13.2244898 Z M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M12,15.9183673 C14.1640545,15.9183673 15.9183673,14.1640545 15.9183673,12 C15.9183673,9.83594547 14.1640545,8.08163265 12,8.08163265 C9.83594547,8.08163265 8.08163265,9.83594547 8.08163265,12 C8.08163265,14.1640545 9.83594547,15.9183673 12,15.9183673 Z"
-                                    }, void 0, false, {
-                                        fileName: "src/component/Header.js",
-                                        lineNumber: 58,
-                                        columnNumber: 9
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/component/Header.js",
-                                    lineNumber: 51,
-                                    columnNumber: 8
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/component/Header.js",
-                                lineNumber: 50,
-                                columnNumber: 7
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Help"
-                            }, void 0, false, {
-                                fileName: "src/component/Header.js",
-                                lineNumber: 61,
-                                columnNumber: 7
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/component/Header.js",
-                        lineNumber: 49,
-                        columnNumber: 6
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/component/Header.js",
-                    lineNumber: 48,
-                    columnNumber: 5
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/component/Header.js",
-                lineNumber: 47,
-                columnNumber: 4
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/component/Header.js",
-        lineNumber: 27,
-        columnNumber: 3
-    }, undefined);
-};
-_c2 = RightMenu;
-const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header-nav",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "inner-header-nav",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
-                    fileName: "src/component/Header.js",
-                    lineNumber: 72,
-                    columnNumber: 5
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LocateMe, {}, void 0, false, {
-                    fileName: "src/component/Header.js",
-                    lineNumber: 73,
-                    columnNumber: 5
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RightMenu, {}, void 0, false, {
-                    fileName: "src/component/Header.js",
-                    lineNumber: 74,
-                    columnNumber: 5
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/component/Header.js",
-            lineNumber: 71,
-            columnNumber: 4
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/component/Header.js",
-        lineNumber: 70,
-        columnNumber: 3
-    }, undefined);
-};
-_c3 = Header;
-var _c, _c1, _c2, _c3;
-$RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "LocateMe");
-$RefreshReg$(_c2, "RightMenu");
-$RefreshReg$(_c3, "Header");
-
-  $parcel$ReactRefreshHelpers$3d92.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iizf5":[function(require,module,exports) {
+},{}],"giGSC":[function() {},{}],"iizf5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$cee4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27686,10 +27286,6 @@ function SearchBox({ allRestuarant , allsetRestuarant  }) {
     _s1();
     const [searchKeyword, setSearchKeyword] = (0, _react.useState)("");
     const [isVisible, setIsVisible] = (0, _react.useState)(false);
-    const showInfo = (e)=>{
-        e.preventDefault();
-        setIsVisible(true);
-    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "search-box-input",
         children: [
@@ -27701,7 +27297,7 @@ function SearchBox({ allRestuarant , allsetRestuarant  }) {
                 onFocus: ()=>setIsVisible(true)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 68,
+                lineNumber: 64,
                 columnNumber: 4
             }, this),
             isVisible === true ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -27715,12 +27311,12 @@ function SearchBox({ allRestuarant , allsetRestuarant  }) {
                             className: "icon-magnifier"
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 84,
+                            lineNumber: 80,
                             columnNumber: 7
                         }, this)
                     }, void 0, false, {
                         fileName: "src/component/Body.js",
-                        lineNumber: 78,
+                        lineNumber: 74,
                         columnNumber: 6
                     }, this),
                     searchKeyword !== "" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27741,17 +27337,17 @@ function SearchBox({ allRestuarant , allsetRestuarant  }) {
                                 "stroke-width": "1"
                             }, void 0, false, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 95,
+                                lineNumber: 91,
                                 columnNumber: 9
                             }, this)
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 94,
+                            lineNumber: 90,
                             columnNumber: 8
                         }, this)
                     }, void 0, false, {
                         fileName: "src/component/Body.js",
-                        lineNumber: 87,
+                        lineNumber: 83,
                         columnNumber: 7
                     }, this) : ""
                 ]
@@ -27764,18 +27360,18 @@ function SearchBox({ allRestuarant , allsetRestuarant  }) {
                     className: "icon-magnifier"
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 115,
+                    lineNumber: 111,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 109,
+                lineNumber: 105,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/component/Body.js",
-        lineNumber: 67,
+        lineNumber: 63,
         columnNumber: 3
     }, this);
 }
@@ -27791,7 +27387,7 @@ $RefreshReg$(_c2, "SearchBox");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Resturant":"cNfI6","./config":"cTO3R"}],"cNfI6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Resturant":"cNfI6","./config":"cTO3R","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cNfI6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7bbc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27804,7 +27400,8 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _config = require("./config");
-const Resturant = ({ name , cloudinaryImageId , cuisines , lastMileTravelString , avgRating , slaString , costForTwoString  })=>{
+const Resturant = ({ name , cloudinaryImageId , cuisines , lastMileTravelString , avgRating , slaString , costForTwoString , ribbon , aggregatedDiscountInfo  })=>{
+    // const { header } = aggregatedDiscountInfo;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card-position",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27822,14 +27419,34 @@ const Resturant = ({ name , cloudinaryImageId , cuisines , lastMileTravelString 
                                 src: (0, _config.IMG_CDN_URL) + cloudinaryImageId
                             }, void 0, false, {
                                 fileName: "src/component/Resturant.js",
-                                lineNumber: 21,
+                                lineNumber: 26,
                                 columnNumber: 8
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/component/Resturant.js",
-                            lineNumber: 20,
+                            lineNumber: 25,
                             columnNumber: 7
                         }, undefined),
+                        ribbon ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "promote",
+                            style: {
+                                background: "rgb(58, 60, 65)",
+                                color: "rgb(255, 255, 255)",
+                                borderColor: "rgb(30, 32, 35) transparent"
+                            },
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "text",
+                                children: ribbon[0].type
+                            }, void 0, false, {
+                                fileName: "src/component/Resturant.js",
+                                lineNumber: 37,
+                                columnNumber: 9
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/component/Resturant.js",
+                            lineNumber: 29,
+                            columnNumber: 8
+                        }, undefined) : "",
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "res-detail",
                             children: [
@@ -27838,7 +27455,7 @@ const Resturant = ({ name , cloudinaryImageId , cuisines , lastMileTravelString 
                                     children: name
                                 }, void 0, false, {
                                     fileName: "src/component/Resturant.js",
-                                    lineNumber: 24,
+                                    lineNumber: 44,
                                     columnNumber: 8
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27846,60 +27463,60 @@ const Resturant = ({ name , cloudinaryImageId , cuisines , lastMileTravelString 
                                     children: cuisines.join(", ")
                                 }, void 0, false, {
                                     fileName: "src/component/Resturant.js",
-                                    lineNumber: 25,
+                                    lineNumber: 45,
                                     columnNumber: 8
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/component/Resturant.js",
-                            lineNumber: 23,
+                            lineNumber: 43,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "res-others",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: avgRating <= 3.9 ? "rating average-rate" : "rating good-rate ",
+                                    className: avgRating <= 3.9 && !isNaN(avgRating) ? "rating average-rate" : "rating good-rate ",
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                             className: "icon-star"
                                         }, void 0, false, {
                                             fileName: "src/component/Resturant.js",
-                                            lineNumber: 33,
+                                            lineNumber: 55,
                                             columnNumber: 9
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                             children: avgRating
                                         }, void 0, false, {
                                             fileName: "src/component/Resturant.js",
-                                            lineNumber: 34,
+                                            lineNumber: 56,
                                             columnNumber: 9
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/component/Resturant.js",
-                                    lineNumber: 28,
+                                    lineNumber: 48,
                                     columnNumber: 8
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     children: "•"
                                 }, void 0, false, {
                                     fileName: "src/component/Resturant.js",
-                                    lineNumber: 36,
+                                    lineNumber: 58,
                                     columnNumber: 8
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     children: slaString
                                 }, void 0, false, {
                                     fileName: "src/component/Resturant.js",
-                                    lineNumber: 37,
+                                    lineNumber: 59,
                                     columnNumber: 8
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     children: "•"
                                 }, void 0, false, {
                                     fileName: "src/component/Resturant.js",
-                                    lineNumber: 38,
+                                    lineNumber: 60,
                                     columnNumber: 8
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27907,34 +27524,58 @@ const Resturant = ({ name , cloudinaryImageId , cuisines , lastMileTravelString 
                                     children: costForTwoString
                                 }, void 0, false, {
                                     fileName: "src/component/Resturant.js",
-                                    lineNumber: 39,
+                                    lineNumber: 61,
                                     columnNumber: 8
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/component/Resturant.js",
-                            lineNumber: 27,
+                            lineNumber: 47,
+                            columnNumber: 7
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "offers",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    class: "icon-offer-filled icon"
+                                }, void 0, false, {
+                                    fileName: "src/component/Resturant.js",
+                                    lineNumber: 66,
+                                    columnNumber: 8
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    class: "text",
+                                    children: "20% off | Use SWIGGYIT"
+                                }, void 0, false, {
+                                    fileName: "src/component/Resturant.js",
+                                    lineNumber: 67,
+                                    columnNumber: 8
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/component/Resturant.js",
+                            lineNumber: 65,
                             columnNumber: 7
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/component/Resturant.js",
-                    lineNumber: 19,
+                    lineNumber: 24,
                     columnNumber: 6
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/component/Resturant.js",
-                lineNumber: 18,
+                lineNumber: 23,
                 columnNumber: 5
             }, undefined)
         }, void 0, false, {
             fileName: "src/component/Resturant.js",
-            lineNumber: 14,
+            lineNumber: 19,
             columnNumber: 4
         }, undefined)
     }, void 0, false, {
         fileName: "src/component/Resturant.js",
-        lineNumber: 13,
+        lineNumber: 18,
         columnNumber: 3
     }, undefined);
 };
@@ -27948,12 +27589,15 @@ $RefreshReg$(_c, "Resturant");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./config":"cTO3R","react/jsx-dev-runtime":"iTorj"}],"cTO3R":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./config":"cTO3R","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cTO3R":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+parcelHelpers.export(exports, "IMG_SLIDER_URL", ()=>IMG_SLIDER_URL);
 parcelHelpers.export(exports, "Restaurant_Data", ()=>Restaurant_Data);
+parcelHelpers.export(exports, "carouselOptions", ()=>carouselOptions);
 const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const IMG_SLIDER_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/";
 const Restaurant_Data = [
     {
         type: "restaurant",
@@ -29741,9 +29385,1682 @@ const Restaurant_Data = [
             new: false
         },
         subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "607975",
+            name: "PARATHA JUNCTION",
+            uuid: "21b1751c-6c4e-4843-91a6-276b08f21282",
+            city: "4",
+            area: "Karol Bagh",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "agdavoxeigohgqy5xtt5",
+            cuisines: [
+                "North Indian"
+            ],
+            tags: [],
+            costForTwo: 5000,
+            costForTwoString: "₹50 FOR TWO",
+            deliveryTime: 54,
+            minDeliveryTime: 50,
+            maxDeliveryTime: 60,
+            slaString: "50-60 MINS",
+            lastMileTravel: 12.300000190734863,
+            slugs: {
+                restaurant: "paratha-junction-karol-bagh-karol-bagh-2",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "3729, Ground Floor, Dariba Pan, Near, Railway Station, Ratan Lal Market, Kaseru Walan, Paharganj, New Delhi, Delhi 110055, India",
+            locality: "Paharganj",
+            parentId: 3467,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 10600,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 10600,
+                message: "",
+                title: "Delivery Charge",
+                amount: "10600",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 1,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "12.3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "607975",
+                deliveryTime: 54,
+                minDeliveryTime: 50,
+                maxDeliveryTime: 60,
+                lastMileTravel: 12.300000190734863,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "IT_IS_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹50 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "640721",
+            name: "Paratha Hub",
+            uuid: "a34c1cb9-f83d-4336-a3de-33be5965383f",
+            city: "4",
+            area: "Rohini",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "mj6bufjzvob4w5ith3us",
+            cuisines: [
+                "Indian",
+                "Fast Food",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 9900,
+            costForTwoString: "₹99 FOR TWO",
+            deliveryTime: 40,
+            minDeliveryTime: 40,
+            maxDeliveryTime: 40,
+            slaString: "40 MINS",
+            lastMileTravel: 5.5,
+            slugs: {
+                restaurant: "paratha-hub-rohini-rohini",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "G-9/99 Sector 16, Rohini Delhi, RITHALA, Rohini, North West , Delhi - 110089",
+            locality: "Sector 16 G",
+            parentId: 155386,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "10% off",
+                shortDescriptionList: [
+                    {
+                        meta: "10% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to ₹40 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "10% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to ₹40 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "NEW"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "5.5 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "640721",
+                deliveryTime: 40,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 40,
+                lastMileTravel: 5.5,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: true
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹99 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "323927",
+            name: "Kullhad - 100% Desi Chai",
+            uuid: "6848c430-b672-439e-a2f8-cdc882803feb",
+            city: "4",
+            area: "Tri Nagar",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "zf3lkiamwbs7jgzhpfi6",
+            cuisines: [
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 9900,
+            costForTwoString: "₹99 FOR TWO",
+            deliveryTime: 37,
+            minDeliveryTime: 37,
+            maxDeliveryTime: 37,
+            slaString: "37 MINS",
+            lastMileTravel: 5.699999809265137,
+            slugs: {
+                restaurant: "kullhad---100%-desi-chai-ashok-vihar-ashok-vihar",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "2525/193, near Hanuman Mandir, Onkar Nagar A, Tota Ram Bazar, Ganeshpura, Tri Nagar, New Delhi, Delhi 110035, India",
+            locality: "Ashok Vihar",
+            parentId: 121719,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "50% off",
+                shortDescriptionList: [
+                    {
+                        meta: "50% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "50% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "5.6 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "323927",
+                deliveryTime: 37,
+                minDeliveryTime: 37,
+                maxDeliveryTime: 37,
+                lastMileTravel: 5.699999809265137,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹99 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "621810",
+            name: "The Arrow Rasoi",
+            uuid: "335a4db7-cd94-4644-bba4-97e3a17c098a",
+            city: "4",
+            area: "Rohini",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "nnizmzephwdamljihapd",
+            cuisines: [
+                "North Indian",
+                "Chinese",
+                "Fast Food",
+                "Snacks",
+                "Thalis"
+            ],
+            tags: [],
+            costForTwo: 9900,
+            costForTwoString: "₹99 FOR TWO",
+            deliveryTime: 42,
+            minDeliveryTime: 42,
+            maxDeliveryTime: 42,
+            slaString: "42 MINS",
+            lastMileTravel: 5.699999809265137,
+            slugs: {
+                restaurant: "the-arrow-rasoi-rohini-rohini",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "I 6/91 Ram krishna marg rohini sec 16 west, BEGUM PUR, Rohini, North West , Delhi - 110089",
+            locality: "BEGUM PUR",
+            parentId: 370327,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "5.6 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "621810",
+                deliveryTime: 42,
+                minDeliveryTime: 42,
+                maxDeliveryTime: 42,
+                lastMileTravel: 5.699999809265137,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹99 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "93301",
+            name: "sharma ji paratha wala delhi 6",
+            uuid: "24c25f3e-2fe7-4e5c-b7a5-8d66ce02a67e",
+            city: "4",
+            area: "kamla nagar ",
+            totalRatingsString: "50+ ratings",
+            cloudinaryImageId: "dwaicawlm6vlbesmigqn",
+            cuisines: [
+                "North Indian"
+            ],
+            tags: [],
+            costForTwo: 9900,
+            costForTwoString: "₹99 FOR TWO",
+            deliveryTime: 44,
+            minDeliveryTime: 44,
+            maxDeliveryTime: 44,
+            slaString: "44 MINS",
+            lastMileTravel: 7.900000095367432,
+            slugs: {
+                restaurant: "sharma-ji-paratha-wala-delhi-6-delhi-india-tis-hazari",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "2761 gali ram roop 2nd floor, Near robin cenima maim bazaar sabji mandi, DELHI, CIVIL LINES, Central, Delhi - 110007",
+            locality: "Civil Lines",
+            parentId: 11465,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "Free delight",
+                shortDescriptionList: [
+                    {
+                        meta: "Free delight on orders above ₹99",
+                        discountType: "Freebie",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "Free delight on orders above ₹99",
+                        discountType: "Freebie",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free delight",
+                        discountType: "Freebie",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "Free delight on orders above ₹99",
+                        discountType: "Freebie",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 1,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "7.9 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "93301",
+                deliveryTime: 44,
+                minDeliveryTime: 44,
+                maxDeliveryTime: 44,
+                lastMileTravel: 7.900000095367432,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "IT_IS_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.3",
+            totalRatings: 50,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹99 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "10110",
+            name: "Sita Ram Diwan Chand",
+            uuid: "270d7250-c7a7-42a1-b52b-1570cffdf581",
+            city: "4",
+            area: "Pitam Pura",
+            totalRatingsString: "500+ ratings",
+            cloudinaryImageId: "ds5pkjzsjsvfxb2xhmsp",
+            cuisines: [
+                "North Indian",
+                "Snacks",
+                "Street Food"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 24,
+            minDeliveryTime: 24,
+            maxDeliveryTime: 24,
+            slaString: "24 MINS",
+            lastMileTravel: 3,
+            slugs: {
+                restaurant: "sita-ram-diwan-chand-nsp",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "Shop 2, MD Market, Muni Maya Ram Jain Marg, MD Block, Pitampura",
+            locality: "Muni Maya Ram Jain Marg",
+            parentId: 3621,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "50% off",
+                shortDescriptionList: [
+                    {
+                        meta: "50% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "50% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=5654740~p=1~eid=00000185-a3d4-7506-29f7-37eb0022017b",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "10110",
+                deliveryTime: 24,
+                minDeliveryTime: 24,
+                maxDeliveryTime: 24,
+                lastMileTravel: 3,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "4.1",
+            totalRatings: 500,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹100 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "36270",
+            name: "Bille Di hatti (Pitampura) ",
+            uuid: "a7e53533-9300-46e7-9e6b-ba3278903701",
+            city: "4",
+            area: "Pitampura",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "xovqdwufznyil35jg602",
+            cuisines: [
+                "Street Food",
+                "Snacks",
+                "North Indian"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 21,
+            minDeliveryTime: 21,
+            maxDeliveryTime: 21,
+            slaString: "21 MINS",
+            lastMileTravel: 3,
+            slugs: {
+                restaurant: "bille-di-hatti-pp-trade-centre-nsp",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "Rp 8 Pitampura new delhi -110034",
+            locality: "RP Block, Pitampura",
+            parentId: 4639,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FLAT125 off",
+                shortDescriptionList: [
+                    {
+                        meta: "FLAT125 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FLAT125 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "₹125 OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FLAT125 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "36279",
+                deliveryTime: 21,
+                minDeliveryTime: 21,
+                maxDeliveryTime: 21,
+                lastMileTravel: 3,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.9",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹100 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "611050",
+            name: "GOLA JI PRANATHE WALE",
+            uuid: "a546b16f-c342-42a1-b563-c0a58aa757ec",
+            city: "4",
+            area: "Ashok Vihar",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "i08x3ukvxdsbdrr7cccq",
+            cuisines: [
+                "North Indian",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 32,
+            minDeliveryTime: 32,
+            maxDeliveryTime: 32,
+            slaString: "32 MINS",
+            lastMileTravel: 2.299999952316284,
+            slugs: {
+                restaurant: "gola-ji-pranathe-wale-ashok-vihar-ashok-vihar",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "Adarsh Nagar Metro Station, Mool Chand Nagar, Adarsh Nagar, Delhi, 110033, India",
+            locality: "Mool Chand Nagar",
+            parentId: 363745,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "611050",
+                deliveryTime: 32,
+                minDeliveryTime: 32,
+                maxDeliveryTime: 32,
+                lastMileTravel: 2.299999952316284,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹100 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "321440",
+            name: "Drool Over Biryani",
+            uuid: "13191f78-76bd-45a2-b373-80a75c2d10c4",
+            city: "4",
+            area: "Ashok Vihar",
+            totalRatingsString: "20+ ratings",
+            cloudinaryImageId: "djvp7p3jgavopld3p6ds",
+            cuisines: [
+                "Indian",
+                "Street Food",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 33,
+            minDeliveryTime: 33,
+            maxDeliveryTime: 33,
+            slaString: "33 MINS",
+            lastMileTravel: 4.599999904632568,
+            slugs: {
+                restaurant: "pav-bhaji-junction-sohna-road-sohna-road",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "Plot No 1 First Floor, GT Karnal Road, Industrial Area.",
+            locality: "Azadpur",
+            parentId: 314404,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "4.5 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "321440",
+                deliveryTime: 33,
+                minDeliveryTime: 33,
+                maxDeliveryTime: 33,
+                lastMileTravel: 4.599999904632568,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "2.7",
+            totalRatings: 20,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹100 FOR TWO"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "580401",
+            name: "ChaCha ke Pranthe",
+            uuid: "227dcd5a-8e40-429b-b678-e66957af08f9",
+            city: "4",
+            area: "Ashok Vihar",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "varbd25fgtiub9xjuqxw",
+            cuisines: [
+                "North Indian",
+                "Chinese",
+                "Biryani",
+                "Snacks"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 40,
+            minDeliveryTime: 40,
+            maxDeliveryTime: 40,
+            slaString: "40 MINS",
+            lastMileTravel: 4.400000095367432,
+            slugs: {
+                restaurant: "chacha-ke-pranthe-ashok-vihar-ashok-vihar",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "Shop no. 31-B, Murga Market, J Block, Phase 1, DDA Market, Ashok Vihar",
+            locality: "Dda Market",
+            parentId: 347379,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "4.4 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "580401",
+                deliveryTime: 40,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 40,
+                lastMileTravel: 4.400000095367432,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic",
+        scrubber: {
+            value: "₹100 FOR TWO"
+        }
+    }
+];
+const carouselOptions = [
+    {
+        type: "carouselElement",
+        subtype: "image",
+        data: {
+            bannerId: 619141,
+            creativeId: "rng/md/carousel/production/zpkkdkmvlj5cuvqbc50t",
+            type: "restaurantCollectionV2",
+            link: "56413",
+            cityId: 0,
+            restaurantUuid: "",
+            restaurantParentId: "0",
+            thirdPartyVendor: "",
+            thirdPartyAddress: false
+        }
+    },
+    {
+        type: "carouselElement",
+        subtype: "image",
+        data: {
+            bannerId: 304827,
+            creativeId: "rng/md/carousel/production/awurei8ypqkafoqay9ym",
+            type: "restaurantCollectionV2",
+            link: "47670",
+            cityId: 0,
+            restaurantUuid: "",
+            restaurantParentId: "0",
+            thirdPartyVendor: "",
+            thirdPartyAddress: false
+        }
+    },
+    {
+        type: "carouselElement",
+        subtype: "image",
+        data: {
+            bannerId: 607193,
+            creativeId: "rng/md/carousel/production/s5ug2key6e2sptaxku5v",
+            type: "restaurantCollectionV2",
+            link: "56410",
+            cityId: 0,
+            restaurantUuid: "",
+            restaurantParentId: "0",
+            thirdPartyVendor: "",
+            thirdPartyAddress: false
+        }
+    },
+    {
+        type: "carouselElement",
+        subtype: "image",
+        data: {
+            bannerId: 607195,
+            creativeId: "rng/md/carousel/production/ifi2lbzxeu1hvsqrsip3",
+            type: "restaurantCollectionV2",
+            link: "56421",
+            cityId: 0,
+            restaurantUuid: "",
+            restaurantParentId: "0",
+            thirdPartyVendor: "",
+            thirdPartyAddress: false
+        }
     }
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequire1a02")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("aeda6dce8f2598a1");
+function debounce(func, delay) {
+    var args;
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + " %exports% " + key);
+    }
+}
+
+},{"aeda6dce8f2598a1":"786KC"}],"knXDc":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3d92 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3d92.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Title", ()=>Title);
+parcelHelpers.export(exports, "LocateMe", ()=>LocateMe);
+parcelHelpers.export(exports, "RightMenu", ()=>RightMenu);
+parcelHelpers.export(exports, "Header", ()=>Header);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Title = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "logo",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: "https://img.icons8.com/color-glass/46/null/bagel.png"
+            }, void 0, false, {
+                fileName: "src/component/Header.js",
+                lineNumber: 7,
+                columnNumber: 5
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/component/Header.js",
+            lineNumber: 6,
+            columnNumber: 4
+        }, undefined)
+    }, void 0, false);
+};
+_c = Title;
+const LocateMe = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "locate-me",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "_1tcx6 _34oCb",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "_3odgy",
+                    children: "Shalimar Bagh"
+                }, void 0, false, {
+                    fileName: "src/component/Header.js",
+                    lineNumber: 16,
+                    columnNumber: 5
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/component/Header.js",
+                lineNumber: 15,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "_3HusE",
+                children: "Mukherjee Nagar, Delhi, India"
+            }, void 0, false, {
+                fileName: "src/component/Header.js",
+                lineNumber: 18,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "icon-downArrow kVKTT"
+            }, void 0, false, {
+                fileName: "src/component/Header.js",
+                lineNumber: 19,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "_21VC0 sPr5A"
+            }, void 0, false, {
+                fileName: "src/component/Header.js",
+                lineNumber: 20,
+                columnNumber: 4
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/component/Header.js",
+        lineNumber: 14,
+        columnNumber: 3
+    }, undefined);
+};
+_c1 = LocateMe;
+const RightMenu = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: "right-nav",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: "nav-item",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "nav-item-wrapper ",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        className: "nav-link",
+                        href: "/checkout",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "nav-icon",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                        className: "svg-cart",
+                                        viewBox: "-1 0 37 32",
+                                        height: 20,
+                                        width: 20,
+                                        fill: "#686b78",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                            d: "M4.438 0l-2.598 5.11-1.84 26.124h34.909l-1.906-26.124-2.597-5.11z"
+                                        }, void 0, false, {
+                                            fileName: "src/component/Header.js",
+                                            lineNumber: 39,
+                                            columnNumber: 9
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/component/Header.js",
+                                        lineNumber: 32,
+                                        columnNumber: 8
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "cart",
+                                        children: "0"
+                                    }, void 0, false, {
+                                        fileName: "src/component/Header.js",
+                                        lineNumber: 41,
+                                        columnNumber: 8
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/component/Header.js",
+                                lineNumber: 31,
+                                columnNumber: 7
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "Cart"
+                            }, void 0, false, {
+                                fileName: "src/component/Header.js",
+                                lineNumber: 43,
+                                columnNumber: 7
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/Header.js",
+                        lineNumber: 30,
+                        columnNumber: 6
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/component/Header.js",
+                    lineNumber: 29,
+                    columnNumber: 5
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/component/Header.js",
+                lineNumber: 28,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: "nav-item",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "nav-item-wrapper ",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        className: "nav-link",
+                        href: "/checkout",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "nav-icon",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                    className: "svg-help",
+                                    viewBox: "6 -1 12 25",
+                                    height: 19,
+                                    width: 19,
+                                    fill: "#686b78",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        d: "M21.966903,13.2244898 C22.0156989,12.8231523 22.0408163,12.4145094 22.0408163,12 C22.0408163,11.8357822 22.036874,11.6724851 22.029079,11.5101984 L17.8574333,11.5102041 C17.8707569,11.6717062 17.877551,11.8350597 17.877551,12 C17.877551,12.4199029 17.8335181,12.8295214 17.749818,13.2244898 L21.966903,13.2244898 Z M21.5255943,15.1836735 L16.9414724,15.1836735 C15.8950289,16.8045422 14.0728218,17.877551 12,17.877551 C9.92717823,17.877551 8.1049711,16.8045422 7.05852762,15.1836735 L2.47440565,15.1836735 C3.80564362,19.168549 7.56739481,22.0408163 12,22.0408163 C16.4326052,22.0408163 20.1943564,19.168549 21.5255943,15.1836735 Z M21.7400381,9.55102041 C20.6468384,5.18931674 16.7006382,1.95918367 12,1.95918367 C7.2993618,1.95918367 3.3531616,5.18931674 2.25996187,9.55102041 L6.6553883,9.55102041 C7.58404845,7.5276442 9.62792376,6.12244898 12,6.12244898 C14.3720762,6.12244898 16.4159515,7.5276442 17.3446117,9.55102041 L21.7400381,9.55102041 Z M2.03309705,13.2244898 L6.25018203,13.2244898 C6.16648186,12.8295214 6.12244898,12.4199029 6.12244898,12 C6.12244898,11.8350597 6.1292431,11.6717062 6.14256675,11.5102041 L1.97092075,11.5102041 C1.96312595,11.6724851 1.95918367,11.8357822 1.95918367,12 C1.95918367,12.4145094 1.98430112,12.8231523 2.03309705,13.2244898 Z M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M12,15.9183673 C14.1640545,15.9183673 15.9183673,14.1640545 15.9183673,12 C15.9183673,9.83594547 14.1640545,8.08163265 12,8.08163265 C9.83594547,8.08163265 8.08163265,9.83594547 8.08163265,12 C8.08163265,14.1640545 9.83594547,15.9183673 12,15.9183673 Z"
+                                    }, void 0, false, {
+                                        fileName: "src/component/Header.js",
+                                        lineNumber: 58,
+                                        columnNumber: 9
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/component/Header.js",
+                                    lineNumber: 51,
+                                    columnNumber: 8
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/component/Header.js",
+                                lineNumber: 50,
+                                columnNumber: 7
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "Help"
+                            }, void 0, false, {
+                                fileName: "src/component/Header.js",
+                                lineNumber: 61,
+                                columnNumber: 7
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/Header.js",
+                        lineNumber: 49,
+                        columnNumber: 6
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/component/Header.js",
+                    lineNumber: 48,
+                    columnNumber: 5
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/component/Header.js",
+                lineNumber: 47,
+                columnNumber: 4
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/component/Header.js",
+        lineNumber: 27,
+        columnNumber: 3
+    }, undefined);
+};
+_c2 = RightMenu;
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header-nav",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "inner-header-nav",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                    fileName: "src/component/Header.js",
+                    lineNumber: 72,
+                    columnNumber: 5
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LocateMe, {}, void 0, false, {
+                    fileName: "src/component/Header.js",
+                    lineNumber: 73,
+                    columnNumber: 5
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RightMenu, {}, void 0, false, {
+                    fileName: "src/component/Header.js",
+                    lineNumber: 74,
+                    columnNumber: 5
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/component/Header.js",
+            lineNumber: 71,
+            columnNumber: 4
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/component/Header.js",
+        lineNumber: 70,
+        columnNumber: 3
+    }, undefined);
+};
+_c3 = Header;
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "LocateMe");
+$RefreshReg$(_c2, "RightMenu");
+$RefreshReg$(_c3, "Header");
+
+  $parcel$ReactRefreshHelpers$3d92.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4a0Hw":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a8f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a8f6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Carousel", ()=>Carousel);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _config = require("./config");
+const Carousel = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "black-container ",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "carousel-container ",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "carousel-position ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "carousel-row",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "display-cards",
+                                children: (0, _config.carouselOptions).map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            href: "/collections/47668?type=rcv2",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                src: (0, _config.IMG_SLIDER_URL) + item.data.creativeId
+                                            }, void 0, false, {
+                                                fileName: "src/component/Carousel.js",
+                                                lineNumber: 15,
+                                                columnNumber: 12
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/component/Carousel.js",
+                                            lineNumber: 14,
+                                            columnNumber: 11
+                                        }, undefined)
+                                    }, item.data.bannerId, false, {
+                                        fileName: "src/component/Carousel.js",
+                                        lineNumber: 13,
+                                        columnNumber: 10
+                                    }, undefined))
+                            }, void 0, false, {
+                                fileName: "src/component/Carousel.js",
+                                lineNumber: 11,
+                                columnNumber: 8
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/component/Carousel.js",
+                            lineNumber: 10,
+                            columnNumber: 7
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "_1Wnte _12MuM",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "icon-back _2ByCT"
+                            }, void 0, false, {
+                                fileName: "src/component/Carousel.js",
+                                lineNumber: 22,
+                                columnNumber: 8
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/component/Carousel.js",
+                            lineNumber: 21,
+                            columnNumber: 7
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/component/Carousel.js",
+                    lineNumber: 9,
+                    columnNumber: 6
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/component/Carousel.js",
+                lineNumber: 8,
+                columnNumber: 5
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/component/Carousel.js",
+            lineNumber: 7,
+            columnNumber: 4
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/component/Carousel.js",
+        lineNumber: 6,
+        columnNumber: 3
+    }, undefined);
+};
+_c = Carousel;
+var _c;
+$RefreshReg$(_c, "Carousel");
+
+  $parcel$ReactRefreshHelpers$a8f6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./config":"cTO3R"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequire1a02")
 
 //# sourceMappingURL=index.7271efb6.js.map
