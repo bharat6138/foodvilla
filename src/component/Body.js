@@ -59,10 +59,6 @@ function SearchBox({ allRestuarant, allsetRestuarant }) {
 	const [searchKeyword, setSearchKeyword] = useState("");
 	const [isVisible, setIsVisible] = useState(false);
 
-	const showInfo = (e) => {
-		e.preventDefault();
-		setIsVisible(true);
-	};
 	return (
 		<div className="search-box-input">
 			<input
