@@ -62,10 +62,16 @@ const Resturant = ({
 							{/* <p>{aggregatedDiscountInfo?.shortDescriptionList[0].meta}</p>
 							{console.log(aggregatedDiscountInfo?.shortDescriptionList[0].meta)} */}
 						</div>
-						<div class="offers">
-							<span class="icon-offer-filled icon"></span>
-							<span class="text">20% off | Use SWIGGYIT</span>
-						</div>
+						{aggregatedDiscountInfo ? (
+							<div className="offers">
+								<span className="icon-offer-filled icon"></span>
+								<span className="text">
+									{aggregatedDiscountInfo?.shortDescriptionList[0].meta}
+								</span>
+							</div>
+						) : (
+							""
+						)}
 					</div>
 				</div>
 			</a>
