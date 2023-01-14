@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 export const Title = () => {
 	return (
@@ -23,8 +24,23 @@ export const LocateMe = () => {
 };
 
 export const RightMenu = () => {
+	const [isLoggedIn, setIsLoggedIn] = useState(true);
+
 	return (
 		<ul className="right-nav">
+			{isLoggedIn ? (
+				<li className="nav-item">
+					<button onClick={() => setIsLoggedIn(false)} style={{ color: "#fc8019" }}>
+						Login
+					</button>
+				</li>
+			) : (
+				<li className="nav-item">
+					<button onClick={() => setIsLoggedIn(true)} style={{ color: "#fc8019" }}>
+						Logout
+					</button>
+				</li>
+			)}
 			<li className="nav-item">
 				<div className="nav-item-wrapper ">
 					<a className="nav-link" href="/checkout">
