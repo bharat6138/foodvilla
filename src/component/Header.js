@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Title = () => {
 	return (
 		<>
 			<div className="logo">
-				<img src="https://img.icons8.com/color/48/null/just-eat.png" />
+				<Link to="/">
+					<img src="https://img.icons8.com/color/48/null/just-eat.png" />
+				</Link>
 			</div>
 		</>
 	);
@@ -14,7 +17,7 @@ export const LocateMe = () => {
 	return (
 		<div className="locate-me">
 			<span className="_1tcx6 _34oCb">
-				<span className="_3odgy">Shalimar Bagh</span>
+				<span className="_3odgy">Shalimar Bag</span>
 			</span>
 			<span className="_3HusE">Mukherjee Nagar, Delhi, India</span>
 			<span className="icon-downArrow kVKTT" />
@@ -41,6 +44,9 @@ export const RightMenu = () => {
 					</button>
 				</li>
 			)}
+			<li className="nav-item">
+				<Link to="/about">About</Link>
+			</li>
 			<li className="nav-item">
 				<div className="nav-item-wrapper ">
 					<a className="nav-link" href="/checkout">

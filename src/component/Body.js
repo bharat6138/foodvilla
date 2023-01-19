@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Resturant from "./Resturant";
 import { Restaurant_Data } from "./config";
 import Skeleton from "./Skeleton";
-
+import { Carousel } from "./Carousel";
+import { Link } from "react-router-dom";
 function filterData(searchInput, resturantsList) {
 	let searchData = resturantsList.filter((item) =>
 		item?.data?.name?.toLowerCase().includes(searchInput.toLowerCase()),
@@ -28,40 +29,51 @@ export default function Body() {
 
 	// console.log(resturantList.length);
 	return (
-		<div className="body-content">
-			<div className="inner-body-content">
-				<div className="all-resturant">
-					{allresturantList.length === 0 ? (
-						<div className="skeleton">
-							<Skeleton />
-							<Skeleton />
-							<Skeleton />
-							<Skeleton />
-							<Skeleton />
-							<Skeleton />
-							<Skeleton />
-							<Skeleton />
-						</div>
-					) : (
-						<>
-							<Search
-								filteredResturantsList={filteredResturantsList}
-								setFilteredResturantsList={setFilteredResturantsList}
-								allresturantList={allresturantList}
-								setAllResturantList={setAllResturantList}
-							/>
-							<div className="resturants-margin">
-								<div className="card-row ">
-									{filteredResturantsList.map((restaurant) => {
-										return <Resturant {...restaurant.data} key={restaurant.data.id} />;
-									})}
-								</div>
+		<>
+			<Carousel />
+			<div className="body-content">
+				<div className="inner-body-content">
+					<div className="all-resturant">
+						{allresturantList.length === 0 ? (
+							<div className="skeleton">
+								{Array(4)
+									.fill("")
+									.map((e, index) => (
+										<Skeleton key={index} />
+									))}
 							</div>
-						</>
-					)}
+						) : (
+							<>
+								<Search
+									filteredResturantsList={filteredResturantsList}
+									setFilteredResturantsList={setFilteredResturantsList}
+									allresturantList={allresturantList}
+									setAllResturantList={setAllResturantList}
+								/>
+								<div className="resturants-margin">
+									<div className="card-row ">
+										{filteredResturantsList.map((restaurant) => {
+											return (
+												<>
+													{console.log(restaurant.data.id)}
+													<Link
+														to={"/restaurant/" + restaurant.data.id}
+														className="card-item"
+														key={restaurant.data.id}
+													>
+														<Resturant {...restaurant.data} />
+													</Link>
+												</>
+											);
+										})}
+									</div>
+								</div>
+							</>
+						)}
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
