@@ -17,7 +17,9 @@ export default function Body() {
 	const [allresturantList, setAllResturantList] = useState([]);
 	const [filteredResturantsList, setFilteredResturantsList] = useState([]);
 	const { latitude, longitude, error } = usePosition();
-	const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
+	const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude.toFixed(
+		7,
+	)}&lng=${longitude.toFixed(7)}&page_type=DESKTOP_WEB_LISTING`;
 	// const ADDRESS = `https://www.latlong.net/c/?lat=${lat}&long=${lng}`;
 
 	useEffect(() => {

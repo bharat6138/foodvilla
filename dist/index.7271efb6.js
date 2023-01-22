@@ -27206,7 +27206,7 @@ function Body() {
     const [allresturantList, setAllResturantList] = (0, _react.useState)([]);
     const [filteredResturantsList, setFilteredResturantsList] = (0, _react.useState)([]);
     const { latitude , longitude , error  } = (0, _usePosition.usePosition)();
-    const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
+    const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude.toFixed(7)}&lng=${longitude.toFixed(7)}&page_type=DESKTOP_WEB_LISTING`;
     // const ADDRESS = `https://www.latlong.net/c/?lat=${lat}&long=${lng}`;
     (0, _react.useEffect)(()=>{
         if (latitude && longitude) getRestaurants();
@@ -27228,7 +27228,7 @@ function Body() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carousel.Carousel), {}, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 41,
+                lineNumber: 43,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27248,7 +27248,7 @@ function Body() {
                                         children: latitude
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 47,
+                                        lineNumber: 49,
                                         columnNumber: 8
                                     }, this),
                                     " and Longitude=",
@@ -27259,13 +27259,13 @@ function Body() {
                                         children: longitude
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 49,
+                                        lineNumber: 51,
                                         columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 45,
+                                lineNumber: 47,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27281,7 +27281,7 @@ function Body() {
                                         children: "Get API URL on basis of latitude longitude"
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 52,
+                                        lineNumber: 54,
                                         columnNumber: 8
                                     }, this),
                                     " ",
@@ -27291,25 +27291,25 @@ function Body() {
                                         children: API_URL
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 55,
+                                        lineNumber: 57,
                                         columnNumber: 10
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 51,
+                                lineNumber: 53,
                                 columnNumber: 7
                             }, this),
                             allresturantList?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "skeleton",
                                 children: Array(4).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default), {}, index, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 62,
+                                        lineNumber: 64,
                                         columnNumber: 11
                                     }, this))
                             }, void 0, false, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 58,
+                                lineNumber: 60,
                                 columnNumber: 8
                             }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                 children: [
@@ -27320,7 +27320,7 @@ function Body() {
                                         setAllResturantList: setAllResturantList
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 67,
+                                        lineNumber: 69,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27335,23 +27335,23 @@ function Body() {
                                                         ...restaurant.data
                                                     }, void 0, false, {
                                                         fileName: "src/component/Body.js",
-                                                        lineNumber: 82,
+                                                        lineNumber: 84,
                                                         columnNumber: 14
                                                     }, this)
                                                 }, restaurant.data.id, false, {
                                                     fileName: "src/component/Body.js",
-                                                    lineNumber: 77,
+                                                    lineNumber: 79,
                                                     columnNumber: 13
                                                 }, this);
                                             })
                                         }, void 0, false, {
                                             fileName: "src/component/Body.js",
-                                            lineNumber: 74,
+                                            lineNumber: 76,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 73,
+                                        lineNumber: 75,
                                         columnNumber: 9
                                     }, this)
                                 ]
@@ -27359,17 +27359,17 @@ function Body() {
                         ]
                     }, void 0, true, {
                         fileName: "src/component/Body.js",
-                        lineNumber: 44,
+                        lineNumber: 46,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 43,
+                    lineNumber: 45,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 42,
+                lineNumber: 44,
                 columnNumber: 4
             }, this)
         ]
@@ -27397,7 +27397,7 @@ function Search({ allresturantList , setAllResturantList , filteredResturantsLis
                             children: filteredResturantsList?.length > 0 ? `${filteredResturantsList?.length} resturants` : "no result found"
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 108,
+                            lineNumber: 110,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27409,33 +27409,33 @@ function Search({ allresturantList , setAllResturantList , filteredResturantsLis
                                 setAllResturantList: setAllResturantList
                             }, void 0, false, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 114,
+                                lineNumber: 116,
                                 columnNumber: 8
                             }, this)
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 113,
+                            lineNumber: 115,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 107,
+                    lineNumber: 109,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 106,
+                lineNumber: 108,
                 columnNumber: 5
             }, this)
         }, void 0, false, {
             fileName: "src/component/Body.js",
-            lineNumber: 105,
+            lineNumber: 107,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "src/component/Body.js",
-        lineNumber: 104,
+        lineNumber: 106,
         columnNumber: 3
     }, this);
 }
@@ -27455,7 +27455,7 @@ function SearchBox({ allresturantList , setAllResturantList , filteredResturants
                 onFocus: ()=>setIsVisible(true)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 139,
+                lineNumber: 141,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27467,18 +27467,18 @@ function SearchBox({ allresturantList , setAllResturantList , filteredResturants
                     className: "icon-magnifier"
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 153,
+                    lineNumber: 155,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 147,
+                lineNumber: 149,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/component/Body.js",
-        lineNumber: 138,
+        lineNumber: 140,
         columnNumber: 3
     }, this);
 }
