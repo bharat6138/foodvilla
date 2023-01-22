@@ -17,7 +17,11 @@ export default function Body() {
 	const [allresturantList, setAllResturantList] = useState([]);
 	const [filteredResturantsList, setFilteredResturantsList] = useState([]);
 	const { latitude, longitude, error } = usePosition();
-	const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
+	const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${parseFloat(
+		latitude,
+	).toFixed(7)}&lng=${parseFloat(longitude).toFixed(
+		7,
+	)}&page_type=DESKTOP_WEB_LISTING`;
 	// const ADDRESS = `https://www.latlong.net/c/?lat=${lat}&long=${lng}`;
 
 	useEffect(() => {
@@ -48,7 +52,9 @@ export default function Body() {
 								{parseFloat(latitude).toFixed(7)}
 							</strong>{" "}
 							and Longitude=
-							<strong style={{ color: "rgb(252, 128, 25)" }}>{longitude}</strong>
+							<strong style={{ color: "rgb(252, 128, 25)" }}>
+								{parseFloat(longitude).toFixed(7)}
+							</strong>
 						</p>
 						<p style={{ marginTop: "20px", marginBottom: "20px" }}>
 							<strong style={{ color: "rgb(252, 128, 25)" }}>

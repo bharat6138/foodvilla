@@ -27206,7 +27206,7 @@ function Body() {
     const [allresturantList, setAllResturantList] = (0, _react.useState)([]);
     const [filteredResturantsList, setFilteredResturantsList] = (0, _react.useState)([]);
     const { latitude , longitude , error  } = (0, _usePosition.usePosition)();
-    const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
+    const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${parseFloat(latitude).toFixed(7)}&lng=${parseFloat(longitude).toFixed(7)}&page_type=DESKTOP_WEB_LISTING`;
     // const ADDRESS = `https://www.latlong.net/c/?lat=${lat}&long=${lng}`;
     (0, _react.useEffect)(()=>{
         if (latitude && longitude) getRestaurants();
@@ -27228,7 +27228,7 @@ function Body() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carousel.Carousel), {}, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 41,
+                lineNumber: 45,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27248,7 +27248,7 @@ function Body() {
                                         children: parseFloat(latitude).toFixed(7)
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 47,
+                                        lineNumber: 51,
                                         columnNumber: 8
                                     }, this),
                                     " ",
@@ -27257,16 +27257,16 @@ function Body() {
                                         style: {
                                             color: "rgb(252, 128, 25)"
                                         },
-                                        children: longitude
+                                        children: parseFloat(longitude).toFixed(7)
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 51,
+                                        lineNumber: 55,
                                         columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 45,
+                                lineNumber: 49,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27282,7 +27282,7 @@ function Body() {
                                         children: "Get API URL on basis of latitude longitude"
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 54,
+                                        lineNumber: 60,
                                         columnNumber: 8
                                     }, this),
                                     " ",
@@ -27292,25 +27292,25 @@ function Body() {
                                         children: API_URL
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 57,
+                                        lineNumber: 63,
                                         columnNumber: 10
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 53,
+                                lineNumber: 59,
                                 columnNumber: 7
                             }, this),
                             allresturantList?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "skeleton",
                                 children: Array(4).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default), {}, index, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 64,
+                                        lineNumber: 70,
                                         columnNumber: 11
                                     }, this))
                             }, void 0, false, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 60,
+                                lineNumber: 66,
                                 columnNumber: 8
                             }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                 children: [
@@ -27321,7 +27321,7 @@ function Body() {
                                         setAllResturantList: setAllResturantList
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 69,
+                                        lineNumber: 75,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27336,23 +27336,23 @@ function Body() {
                                                         ...restaurant.data
                                                     }, void 0, false, {
                                                         fileName: "src/component/Body.js",
-                                                        lineNumber: 84,
+                                                        lineNumber: 90,
                                                         columnNumber: 14
                                                     }, this)
                                                 }, restaurant.data.id, false, {
                                                     fileName: "src/component/Body.js",
-                                                    lineNumber: 79,
+                                                    lineNumber: 85,
                                                     columnNumber: 13
                                                 }, this);
                                             })
                                         }, void 0, false, {
                                             fileName: "src/component/Body.js",
-                                            lineNumber: 76,
+                                            lineNumber: 82,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 75,
+                                        lineNumber: 81,
                                         columnNumber: 9
                                     }, this)
                                 ]
@@ -27360,17 +27360,17 @@ function Body() {
                         ]
                     }, void 0, true, {
                         fileName: "src/component/Body.js",
-                        lineNumber: 44,
+                        lineNumber: 48,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 43,
+                    lineNumber: 47,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 42,
+                lineNumber: 46,
                 columnNumber: 4
             }, this)
         ]
@@ -27398,7 +27398,7 @@ function Search({ allresturantList , setAllResturantList , filteredResturantsLis
                             children: filteredResturantsList?.length > 0 ? `${filteredResturantsList?.length} resturants` : "no result found"
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 110,
+                            lineNumber: 116,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27410,33 +27410,33 @@ function Search({ allresturantList , setAllResturantList , filteredResturantsLis
                                 setAllResturantList: setAllResturantList
                             }, void 0, false, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 116,
+                                lineNumber: 122,
                                 columnNumber: 8
                             }, this)
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 115,
+                            lineNumber: 121,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 109,
+                    lineNumber: 115,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 108,
+                lineNumber: 114,
                 columnNumber: 5
             }, this)
         }, void 0, false, {
             fileName: "src/component/Body.js",
-            lineNumber: 107,
+            lineNumber: 113,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "src/component/Body.js",
-        lineNumber: 106,
+        lineNumber: 112,
         columnNumber: 3
     }, this);
 }
@@ -27456,7 +27456,7 @@ function SearchBox({ allresturantList , setAllResturantList , filteredResturants
                 onFocus: ()=>setIsVisible(true)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 141,
+                lineNumber: 147,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27468,18 +27468,18 @@ function SearchBox({ allresturantList , setAllResturantList , filteredResturants
                     className: "icon-magnifier"
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 155,
+                    lineNumber: 161,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 149,
+                lineNumber: 155,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/component/Body.js",
-        lineNumber: 140,
+        lineNumber: 146,
         columnNumber: 3
     }, this);
 }
