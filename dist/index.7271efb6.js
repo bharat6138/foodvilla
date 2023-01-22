@@ -27194,31 +27194,41 @@ var _skeleton = require("./Skeleton");
 var _skeletonDefault = parcelHelpers.interopDefault(_skeleton);
 var _carousel = require("./Carousel");
 var _reactRouterDom = require("react-router-dom");
+var _usePosition = require("../../utils/GeoCode/usePosition");
 var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 function filterData(searchInput, resturantsList) {
     let searchData = resturantsList.filter((item)=>item?.data?.name?.toLowerCase().includes(searchInput.toLowerCase()));
-    console.log(searchData);
+    // console.log(searchData);
     return searchData;
 }
 function Body() {
     _s();
     const [allresturantList, setAllResturantList] = (0, _react.useState)([]);
     const [filteredResturantsList, setFilteredResturantsList] = (0, _react.useState)([]);
+    const { latitude , longitude , error  } = (0, _usePosition.usePosition)();
+    const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
+    // const ADDRESS = `https://www.latlong.net/c/?lat=${lat}&long=${lng}`;
     (0, _react.useEffect)(()=>{
-        getRestaurants();
-    }, []);
+        if (latitude && longitude) getRestaurants();
+    }, [
+        latitude,
+        longitude
+    ]);
+    // console.log(API_URL);
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.717111&lng=77.157598&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(API_URL);
         const json = await data.json();
         setAllResturantList(json?.data?.cards[2]?.data?.data?.cards);
         setFilteredResturantsList(json?.data?.cards[2]?.data?.data?.cards);
+        console.log(API_URL);
+    // console.log(ADDRESS);
     }
     // console.log(resturantList.length);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carousel.Carousel), {}, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 33,
+                lineNumber: 41,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27227,87 +27237,150 @@ function Body() {
                     className: "inner-body-content",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "all-resturant",
-                        children: allresturantList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "skeleton",
-                            children: Array(4).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default), {}, index, false, {
-                                    fileName: "src/component/Body.js",
-                                    lineNumber: 42,
-                                    columnNumber: 11
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "src/component/Body.js",
-                            lineNumber: 38,
-                            columnNumber: 8
-                        }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Search, {
-                                    filteredResturantsList: filteredResturantsList,
-                                    setFilteredResturantsList: setFilteredResturantsList,
-                                    allresturantList: allresturantList,
-                                    setAllResturantList: setAllResturantList
-                                }, void 0, false, {
-                                    fileName: "src/component/Body.js",
-                                    lineNumber: 47,
-                                    columnNumber: 9
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "resturants-margin",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "card-row ",
-                                        children: filteredResturantsList.map((restaurant)=>{
-                                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                                children: [
-                                                    console.log(restaurant.data.id),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                                        to: "/restaurant/" + restaurant.data.id,
-                                                        className: "card-item",
-                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resturantDefault.default), {
-                                                            ...restaurant.data
-                                                        }, void 0, false, {
-                                                            fileName: "src/component/Body.js",
-                                                            lineNumber: 64,
-                                                            columnNumber: 15
-                                                        }, this)
-                                                    }, restaurant.data.id, false, {
-                                                        fileName: "src/component/Body.js",
-                                                        lineNumber: 59,
-                                                        columnNumber: 14
-                                                    }, this)
-                                                ]
-                                            }, void 0, true);
-                                        })
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: [
+                                    "My Location Latitude=",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        style: {
+                                            color: "rgb(252, 128, 25)"
+                                        },
+                                        children: latitude
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 54,
+                                        lineNumber: 47,
+                                        columnNumber: 8
+                                    }, this),
+                                    " and Longitude=",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        style: {
+                                            color: "rgb(252, 128, 25)"
+                                        },
+                                        children: longitude
+                                    }, void 0, false, {
+                                        fileName: "src/component/Body.js",
+                                        lineNumber: 49,
+                                        columnNumber: 8
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/component/Body.js",
+                                lineNumber: 45,
+                                columnNumber: 7
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                style: {
+                                    marginTop: "20px",
+                                    marginBottom: "20px"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        style: {
+                                            color: "rgb(252, 128, 25)"
+                                        },
+                                        children: "Get API URL on basis of latitude longitude"
+                                    }, void 0, false, {
+                                        fileName: "src/component/Body.js",
+                                        lineNumber: 52,
+                                        columnNumber: 8
+                                    }, this),
+                                    " ",
+                                    "= ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        href: "{API_URL}",
+                                        children: API_URL
+                                    }, void 0, false, {
+                                        fileName: "src/component/Body.js",
+                                        lineNumber: 55,
                                         columnNumber: 10
                                     }, this)
-                                }, void 0, false, {
-                                    fileName: "src/component/Body.js",
-                                    lineNumber: 53,
-                                    columnNumber: 9
-                                }, this)
-                            ]
-                        }, void 0, true)
-                    }, void 0, false, {
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/component/Body.js",
+                                lineNumber: 51,
+                                columnNumber: 7
+                            }, this),
+                            allresturantList?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "skeleton",
+                                children: Array(4).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default), {}, index, false, {
+                                        fileName: "src/component/Body.js",
+                                        lineNumber: 62,
+                                        columnNumber: 11
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "src/component/Body.js",
+                                lineNumber: 58,
+                                columnNumber: 8
+                            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Search, {
+                                        filteredResturantsList: filteredResturantsList,
+                                        setFilteredResturantsList: setFilteredResturantsList,
+                                        allresturantList: allresturantList,
+                                        setAllResturantList: setAllResturantList
+                                    }, void 0, false, {
+                                        fileName: "src/component/Body.js",
+                                        lineNumber: 67,
+                                        columnNumber: 9
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "resturants-margin",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "card-row ",
+                                            children: filteredResturantsList?.map((restaurant)=>{
+                                                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                    to: "/restaurant/" + restaurant.data.id,
+                                                    className: "card-item",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resturantDefault.default), {
+                                                        ...restaurant.data
+                                                    }, void 0, false, {
+                                                        fileName: "src/component/Body.js",
+                                                        lineNumber: 82,
+                                                        columnNumber: 14
+                                                    }, this)
+                                                }, restaurant.data.id, false, {
+                                                    fileName: "src/component/Body.js",
+                                                    lineNumber: 77,
+                                                    columnNumber: 13
+                                                }, this);
+                                            })
+                                        }, void 0, false, {
+                                            fileName: "src/component/Body.js",
+                                            lineNumber: 74,
+                                            columnNumber: 10
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/component/Body.js",
+                                        lineNumber: 73,
+                                        columnNumber: 9
+                                    }, this)
+                                ]
+                            }, void 0, true)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/component/Body.js",
-                        lineNumber: 36,
+                        lineNumber: 44,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 35,
+                    lineNumber: 43,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 34,
+                lineNumber: 42,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true);
 }
 exports.default = Body;
-_s(Body, "/gfuSkZCsTBbkqFW9hG9+euua64=");
+_s(Body, "TvdwwWBxhNfnD8KCcHIIM5WIFqQ=", false, function() {
+    return [
+        (0, _usePosition.usePosition)
+    ];
+});
 _c = Body;
 function Search({ allresturantList , setAllResturantList , filteredResturantsList , setFilteredResturantsList  }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27321,10 +27394,10 @@ function Search({ allresturantList , setAllResturantList , filteredResturantsLis
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "total-res",
-                            children: filteredResturantsList.length > 0 ? `${filteredResturantsList.length} resturants` : "no result found"
+                            children: filteredResturantsList?.length > 0 ? `${filteredResturantsList?.length} resturants` : "no result found"
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 91,
+                            lineNumber: 108,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27336,33 +27409,33 @@ function Search({ allresturantList , setAllResturantList , filteredResturantsLis
                                 setAllResturantList: setAllResturantList
                             }, void 0, false, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 97,
+                                lineNumber: 114,
                                 columnNumber: 8
                             }, this)
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 96,
+                            lineNumber: 113,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 90,
+                    lineNumber: 107,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 89,
+                lineNumber: 106,
                 columnNumber: 5
             }, this)
         }, void 0, false, {
             fileName: "src/component/Body.js",
-            lineNumber: 88,
+            lineNumber: 105,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "src/component/Body.js",
-        lineNumber: 87,
+        lineNumber: 104,
         columnNumber: 3
     }, this);
 }
@@ -27382,7 +27455,7 @@ function SearchBox({ allresturantList , setAllResturantList , filteredResturants
                 onFocus: ()=>setIsVisible(true)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 122,
+                lineNumber: 139,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27394,18 +27467,18 @@ function SearchBox({ allresturantList , setAllResturantList , filteredResturants
                     className: "icon-magnifier"
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 136,
+                    lineNumber: 153,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 130,
+                lineNumber: 147,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/component/Body.js",
-        lineNumber: 121,
+        lineNumber: 138,
         columnNumber: 3
     }, this);
 }
@@ -27421,7 +27494,7 @@ $RefreshReg$(_c2, "SearchBox");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Resturant":"cNfI6","./config":"cTO3R","./Skeleton":"kB0Nb","./Carousel":"4a0Hw","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cNfI6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Resturant":"cNfI6","./config":"cTO3R","./Skeleton":"kB0Nb","./Carousel":"4a0Hw","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../utils/GeoCode/usePosition":"dISvZ"}],"cNfI6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7bbc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35608,7 +35681,56 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 } //#endregion
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"knXDc":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dISvZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9731 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9731.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "usePosition", ()=>usePosition);
+var _react = require("react");
+var _s = $RefreshSig$();
+const usePosition = ()=>{
+    _s();
+    const [position, setPosition] = (0, _react.useState)({});
+    const [error, setError] = (0, _react.useState)(null);
+    const onChange = ({ coords  })=>{
+        setPosition({
+            latitude: coords.latitude,
+            longitude: coords.longitude
+        });
+    };
+    const onError = (error)=>{
+        setError(error.message);
+    };
+    (0, _react.useEffect)(()=>{
+        const geo = navigator.geolocation;
+        if (!geo) {
+            setError("Geolocation is not supported");
+            return;
+        }
+        watcher = geo.watchPosition(onChange, onError);
+        return ()=>geo.clearWatch(watcher);
+    }, []);
+    console.log({
+        ...position
+    });
+    return {
+        ...position,
+        error
+    };
+};
+_s(usePosition, "dynHhIjHiH1gzjmYywOPM1LY5S8=");
+
+  $parcel$ReactRefreshHelpers$9731.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"knXDc":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3d92 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
