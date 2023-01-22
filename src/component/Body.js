@@ -4,7 +4,7 @@ import { Restaurant_Data } from "./config";
 import Skeleton from "./Skeleton";
 import { Carousel } from "./Carousel";
 import { Link } from "react-router-dom";
-import { usePosition } from "../../utils/GeoCode/usePosition";
+import { usePosition } from "../../utils/useposition/usePosition";
 function filterData(searchInput, resturantsList) {
 	let searchData = resturantsList.filter((item) =>
 		item?.data?.name?.toLowerCase().includes(searchInput.toLowerCase()),
