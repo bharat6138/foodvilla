@@ -27206,7 +27206,7 @@ function Body() {
     const [allresturantList, setAllResturantList] = (0, _react.useState)([]);
     const [filteredResturantsList, setFilteredResturantsList] = (0, _react.useState)([]);
     const { latitude , longitude , error  } = (0, _usePosition.usePosition)();
-    const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude.toFixed(7)}&lng=${longitude.toFixed(7)}&page_type=DESKTOP_WEB_LISTING`;
+    const API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
     // const ADDRESS = `https://www.latlong.net/c/?lat=${lat}&long=${lng}`;
     (0, _react.useEffect)(()=>{
         if (latitude && longitude) getRestaurants();
@@ -27228,7 +27228,7 @@ function Body() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carousel.Carousel), {}, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 43,
+                lineNumber: 41,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27245,13 +27245,14 @@ function Body() {
                                         style: {
                                             color: "rgb(252, 128, 25)"
                                         },
-                                        children: latitude
+                                        children: parseFloat(latitude).toFixed(7)
                                     }, void 0, false, {
                                         fileName: "src/component/Body.js",
-                                        lineNumber: 49,
+                                        lineNumber: 47,
                                         columnNumber: 8
                                     }, this),
-                                    " and Longitude=",
+                                    " ",
+                                    "and Longitude=",
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
                                         style: {
                                             color: "rgb(252, 128, 25)"
@@ -27265,7 +27266,7 @@ function Body() {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 47,
+                                lineNumber: 45,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27359,17 +27360,17 @@ function Body() {
                         ]
                     }, void 0, true, {
                         fileName: "src/component/Body.js",
-                        lineNumber: 46,
+                        lineNumber: 44,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 45,
+                    lineNumber: 43,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 44,
+                lineNumber: 42,
                 columnNumber: 4
             }, this)
         ]
